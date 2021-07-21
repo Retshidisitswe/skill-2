@@ -1,0 +1,299 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Dashboard</title>
+
+
+	<!-- Bootstrap core CSS -->
+	<link href="https://docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link href="stylesheet" rel="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	
+		<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+
+	
+	
+	
+	<script>
+		$(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+    $(".side-nav .collapse").on("hide.bs.collapse", function() {                   
+        $(this).prev().find(".bi").eq(1).removeClass("bi-angle-right").addClass("bi-angle-down");
+    });
+    $('.side-nav .collapse').on("show.bs.collapse", function() {                        
+        $(this).prev().find(".bi").eq(1).removeClass("bi-angle-down").addClass("bi-angle-right");        
+    });
+})    
+    </script>
+	</head>
+<body>
+<div id="throbber" style="display:none; min-height:120px;"></div>
+<div id="noty-holder"></div>
+<div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="">
+                <img src="img/b2.jpg" alt="LOGO"width="70" height="60">
+            </a>
+        </div>
+        <!-- Top Menu Items -->
+        <ul class="nav navbar-right top-nav">
+            <li><a href="alert.html" data-placement="bottom" data-toggle="tooltip" href="alert.html" data-original-title="Alerts"><i class="bi bi-bell-fill"></i>
+                </a>
+            </li>            
+            <li class="dropdown">
+                <a href="admin.html" class="dropdown-toggle" data-toggle="dropdown">Admin User <i class="bi bi-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="profile.html"><i class="bi bi-person-fill"></i> Edit Profile</a></li>
+                    <li><a href="#"><i class="bi bi-gear-fill"></i> Change Password</a></li>
+                    <li class="divider"></li>
+                    <li><a href="index.html"><i class="bi bi-power"></i> Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <li>
+                    <a href="admin.html" data-toggle="collapse" data-target="#chart"><i class="bi bi-house-fill"></i> Home </a>
+                    
+                </li>
+                <li>
+                    <a class ="nav-link active" href="account.html#accounts" data-toggle="collapse" data-target="#accounts"><i class="bi bi-people-fill"></i>  Accounts </a>
+                    
+                </li>
+                <li>
+                    <a href="statics.html"><i class="bi bi-bar-chart-line-fill"></i>  Statics</a>
+                </li>
+                <li>
+                    <a href="bank.html"><i class="bi bi-droplet-fill"></i></i> Blood Bank</a>
+                </li>
+               
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row" id="main" >
+                <div class="col-sm-12 col-md-12 well" id="content">
+                    <h1>Users Accounts!</h1>
+                </div>
+						
+            </div>
+            <!-- /.row -->
+	
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div><!-- /#wrapper -->
+
+<script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+ 
+
+  <title>Accounts</title>
+</head>
+
+<body>
+
+<h3 id="accounts"></h3>
+<center>
+<table border="1" width="60%">
+    <caption>Blood Donors Info</caption>
+    <tr>
+        <th>#</th>
+        <th>Donors Name</th>
+        <th>Lastly Donated</th>
+        <th>Emergency Number</th>
+        <th>Blood Type</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Peter Parker</td>
+        <td>16 June 2020</td>
+        <td>078 657 8543</td>
+        <td>AB</td>
+    </tr>
+    <tr>
+         <td>2</td>
+        <td>Elizabeth Botha</td>
+        <td>25 January 2019</td>
+        <td>081 675 9908</td>
+        <td>O+</td>
+    </tr>
+	    <tr>
+        <td>3</td>
+        <td>Amelia Van Wyk</td>
+        <td>09 April 2021</td>
+        <td>074 098 2314</td>
+        <td>A-</td>
+    </tr>
+	    <tr>
+         <td>4</td>
+        <td> Musa Xulu</td>
+        <td>01 December 2018</td>
+        <td>060 768 5643</td>
+        <td>B-</td>
+    </tr>
+	    <tr>
+         <td>5</td>
+        <td>Prince Jele</td>
+        <td>10 April 2020</td>
+        <td>072 675 0912</td>
+        <td>O-</td>
+    </tr>
+</table>
+
+</center>
+
+<!--footer start-->
+<footer>
+  <div class="footer-wrap">
+  <div class="container first_class">
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <h3>BE THE FIRST TO KNOW</h3>
+          <p>Get all the latest information on  Triedge Services, Events, Jobs
+            and Fairs. Sign up for our newsletter today.</p>
+        </div>
+        <div class="col-md-4 col-sm-6">
+        <form class="newsletter">
+           <input type="text" placeholder="Email Address"> 
+                                                        <button class="newsletter_submit_btn" type="submit"><i class="fa fa-paper-plane"></i></button>  
+        </form>
+        
+        </div>
+        <div class="col-md-4 col-sm-6">
+        <div class="col-md-12">
+          <div class="standard_social_links">
+        <div>
+          <li class="round-btn btn-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a>
+
+          </li>
+          <li class="round-btn btn-linkedin"><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+
+          </li>
+          <li class="round-btn btn-twitter"><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+
+          </li>
+          <li class="round-btn btn-instagram"><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+
+          </li>
+          <li class="round-btn btn-whatsapp"><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+
+          </li>
+          <li class="round-btn btn-envelop"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+
+          </li>
+        </div>
+      </div>  
+        </div>
+          <div class="clearfix"></div>
+        <div class="col-md-12"><h3 style="text-align: right;">Stay Connected</h3></div>
+        </div>
+      </div>
+  </div>
+    <div class="second_class">
+      <div class="container second_class_bdr">
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+
+          <div class="footer-logo"><img src="img/b.jpg" alt="logo">
+          </div>
+          <p>Your one-stop career platform to find Jobs, Internships, Professional Trainings, Projects, and Volunteering Opportunities.</p>
+        </div>
+        <div class="col-md-2 col-sm-6">
+          <h3>Quick  LInks</h3>
+          <ul class="footer-links">
+            <li><a href="#">Home</a>
+            </li>
+            <li><a href="#">About us</a>
+            </li>
+            <li><a href="#">Triedge Partners</a>
+            </li>
+            <li><a href="#">Contact Us</a>
+            </li>
+            <li><a href="#" target="_blank">Terms &amp; Conditions</a>
+            </li>
+            <li><a href="#" target="_blank">Privacy Policy</a>
+            </li>
+            <li><a href="#">Sitemap</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h3>OUR SERVICES</h3>
+          <ul class="footer-category">
+            <li><a href="#">Fresher Jobs</a>
+            </li>
+            <li><a href="#">InternEdge - Internships &amp; Projects </a>
+            </li>
+            <li><a href="#">Resume Edge - Resume Writing Services</a>
+            </li>
+            <li><a href="#">Readers Galleria - Curated Library</a>
+            </li>
+            <li><a href="#">Trideus - Campus Ambassadors</a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h3>triedge Events</h3>
+          <ul class="footer-links">
+            <li><a href="#">Triedge Events</a>
+            </li>
+
+            <li><a href="#">Jobs &AMP; Internship Fair 2019</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+    </div>
+    
+    <div class="row">
+      
+      <div class="container-fluid">
+      <div class="copyright"> Copyright 2019 | All Rights Reserved by TRIEDGE Solutions Pvt. Ltd.</div>
+      </div>
+      
+    </div>
+  </div>
+  
+  </footer>
+
+<!--footer end-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <!-- Font Awesome 5 links-->
+  <script src="https://kit.fontawesome.com/fddf5c0916.js" crossorigin="anonymous"></script>
+</body>
+</html>
